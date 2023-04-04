@@ -40,6 +40,8 @@ namespace Api
             });
             var connectionConfig = new DbContextConfig(Configuration.GetConnectionString("Sql_cxn"));
             services.AddSingleton(connectionConfig);
+            services.AddTransient<IRacimoRepository, RacimoRepository>();
+            services.AddTransient<IUsuarioRepository, UsuarioRepository>();
             services.AddTransient<IProductosRepository, ProductoRepository>();
             services.AddTransient<IMenuRepository, MenuRepository>();
         }

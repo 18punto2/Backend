@@ -36,7 +36,6 @@ namespace DataPersistence
                 }
             }
         }
-
         public Producto ListarPorId(int id)
         {
             using (IDbConnection cxn = new SqlConnection(_cxnString.Connection))
@@ -47,7 +46,6 @@ namespace DataPersistence
                 return doc == null ? null : doc;
             }
         }
-
         public bool AddEditProducto(Producto item)
         {
             bool result = false;

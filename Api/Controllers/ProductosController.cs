@@ -22,7 +22,6 @@ namespace Api.Controllers
         {
             _IProductosRepository = IProductosRepository;
         }
-        // GET: api/<ProductosController>
         [HttpGet]
         public IActionResult Get()
         {
